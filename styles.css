@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#navbar {
+    width: 100vw;
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #0e7e76;
+    align-items: center;
+}
+#navbar a {
+    text-decoration: none;
+    padding: 0 1%;
+    color: #A9FFF4;
+    font-size: 1.8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#welcome-section {
+    width: 100vw;
+    height: 110vh;
+    background: linear-gradient(#003330 0%, #003330 92%, #C1FFF0 98%, #C1FFF0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #f1faee;
+}
+#welcome-section p {
+    font-size: 1.8rem;
+    color: #A2FaF3;
+}
+#welcome-section p, #welcome-section h1 {
+    text-shadow: 0 0 4px #f1faee;
+}
+#welcome-section h1 {
+    animation: nombre 3s linear infinite;
+}
+#projects {
+    width: 100vw;
+    height: 100vh;
+    background-color:#C1FFF0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#projects h2 {
+    font-size: 2.4rem;
+    border-bottom: 2px solid #003330;
+    padding: 0 6px;
+    padding-bottom: 6px;
+    color: #003330;
+    margin-top: 11vh;
+}
+.project-tile {
+    width:70%;
+    height: 15%;
+    text-align: center;
+    padding: 4vh 0;
+    margin: 15px auto;
+    border-radius: 26px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    background-color: #B2DFDB;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.project-tile:first-of-type {
+    margin-top: 40px;
+    
+}
+.project-tile a {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #003330;
+    text-shadow: 0 0 3px #003330;
+}
+.project-tile p {
+    color: #003330;
+}
+#contacto {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #A2FaF3;
+    background:linear-gradient(#C1FFF0 0%,#C1FFF0 2%, #003330 8%, #003330 100%);
+    color: #f1faee;
+    font-size: 1.8rem;
+}
+#contacto a {
+    text-decoration: none;
+    color: #C1FFF0;
+    text-shadow: 0 0 3px #C1FFF0;
+    height: 100px;
+    padding-top: 26px;
+}
+#contacto p {
+    font-size: 1.4rem;
+}
+#contacto h2 {
+    text-shadow: 0 0 4px #C1FFF0;
+    animation: nombre 3s ease-in-out infinite;
+}
+#links {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:30vw;
+}
+footer {
+    background-color: #003330;
+    width: 100vw;
+    height: 10vh;
+    font-size: 1.1rem;
+    color: #C1FFF0;
+}
+footer > div > p {
+    opacity: 0.6;
+}
+footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+    padding-top: 20px;
+}
+@keyframes navegacion {
+    0% {
+        background-color: #0e7e76;
+        color:#A9FFF4
+    }
+    100% {
+        background-color: #003330;
+        color: white;
+    }
+}
+#navbar > a:hover {
+    animation: navegacion 1s linear  forwards;
+}
+@keyframes nombre {
+    0% {
+        color: #f1faee;
+    }
+    50% {
+        color: #0fada3;
+    }
+    100% {
+        color: #f1faee;
+    }
+}
+@keyframes link {
+    0% {
+
+    }
+    100% {
+        font-size: 2.4rem;
+        transform: rotate(360deg);
+    }
+}
+#links a:hover{
+    animation: link 500ms linear forwards;
+}
+@keyframes proyecto {
+    0% {}
+    30% {
+        font-weight: 450;
+    }
+    60% {
+        font-weight: 700;
+    }
+    100% {
+        width: 80%;
+        background-color: #0fada3;
+        height: 20%;
+        font-weight: 900;
+        ;
+    }
+}
+.project-tile:hover {
+    animation: proyecto 1s linear forwards;
+}
+@media (max-width:550px) {
+    * {
+        font-size: 8px;
+    }
+    .project-tile {
+        padding: 5px 0;
+        margin: 8px 0;
+    }
+    #welcome-section h1, #contacto h2 {
+        font-size: 18px;
+    }
+    #welcome-section p, #contacto p {
+        font-size: 10px;
+    }
+    #projects h2 {
+        font-size: 12px;
+    }
+}
